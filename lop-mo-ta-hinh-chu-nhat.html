@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="720px" height="480px" style="border: 1px solid #d3d3d3;"></canvas>
+    <script>
+        function Rectangle(x,y,width,height) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.strokeRect(x,y,width,height);
+        this.GetPerimeter = function () {
+            return (width + height) * 2 ;
+        }
+        this.GetArea = function () {
+            return width * height ;
+        }
+        this.getWidth = function () {
+            return width ;
+        }
+        this.getHeight =function () {
+            return height ;
+        }
+        };
+        let rectangle = new Rectangle(80,80,210,102);
+        let width = rectangle.getWidth() ;
+        let height = rectangle.getHeight();
+        let area = rectangle.GetArea() ;
+        let perimeter = rectangle.GetPerimeter() ;
+        document.write("Width: "+width+" Height: "+height+" Area: "+area+" Perimeter: "+perimeter );
+
+    
+    // var c = document.getElementById("myCanvas");
+    // var ctx = c.getContext("2d");
+    // ctx.strokeRect(60,40,190,80)
+    
+    </script>
+</body>
+</html>
